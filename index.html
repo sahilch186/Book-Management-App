@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <style>
+        .success{
+            color: white!important;
+            background: #00cb51!important;
+            padding: 5px 10px;
+            margin: 5px 0px 15px 0px;
+            border-radius : 4px;
+        }
+
+        .error, .delete{
+            color: white!important;
+            background: #ff4444!important;
+            padding: 6px 10px;
+            margin: 5px 0px 15px 0px; 
+            border-radius : 4px; 
+        }
+
+        .delete{
+            padding: 5px 7px;
+            border-radius : 50%;
+        }
+
+        .primary{
+            color: white!important;
+            background: #33b5e5!important;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        h1{
+            background: #33b5e5;
+            padding: 6px 10px;
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="main container">
+        <h1>Book Management</h1>
+        <form id="book-form">
+            <div>
+                <label for="title">Book Title</label>
+                <input type="text" id="title" class="u-full-width">
+            </div>
+            <div>
+                <label for="author">Book Author</label>
+                <input type="text" id="author" class="u-full-width">
+            </div>
+            <div>
+                <label for="isbn">ISBN#</label>
+                <input type="text" id="isbn" class="u-full-width">
+            </div>
+            <input type="submit" value="Add Book" class="primary">
+        </form>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
